@@ -1,0 +1,34 @@
+# Everything the scripts write (1.3 GB of .glb files and previews)
+/builds
+
+# Python and Blender leftovers
+__pycache__/
+*.pyc
+*.blend1
+
+# Local tool settings (keep .claude/agents and .claude/skills in git for the factory)
+.claude/*
+!.claude/agents/
+!.claude/skills/
+.idea
+.vscode
+
+# Not real files: the Claude Code sandbox shows these paths as /dev/null masks,
+# so sandboxed git would list them as untracked. No trailing slash on purpose:
+# a masked path looks like a file, and "name/" only matches folders.
+.bashrc
+.bash_profile
+.zshrc
+.zprofile
+.profile
+.gitconfig
+.gitmodules
+.ripgreprc
+.mcp.json
+
+# Software factory: job state and per-job worktrees
+/factory/jobs/
+/.worktrees/
+
+# DeepSeek Harness team state
+/.agent-teams/
